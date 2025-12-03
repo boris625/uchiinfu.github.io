@@ -169,7 +169,8 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-.feature-card {
+        
+        .feature-card {
             background: white;
             padding: 2rem;
             border-radius: 10px;
@@ -269,6 +270,10 @@
                         <li><a href="#">Варианты</a></li>
                     </ul>
                 </nav>
+                <div class="auth-buttons">
+                    <button class="btn btn-outline">Войти</button>
+                    <button class="btn btn-primary">Регистрация</button>
+                </div>
             </div>
         </div>
     </header>
@@ -281,7 +286,7 @@
             
             <div class="exam-selector">
                 <div class="exam-card" onclick="selectExam('oge')">
-                    <h3><a href="https://boris625.github.io/uchiinfuoge.github.io/" class="button-link">ОГЭ 9 класс</a></h3>
+                    <h3>ОГЭ 9 класс</h3>
                     <p>Полный курс подготовки к основному государственному экзаменам</p>
                 </div>
                 <div class="exam-card" onclick="selectExam('ege')">
@@ -291,7 +296,8 @@
             </div>
         </div>
     </section>
-<!-- Секция возможностей -->
+
+    <!-- Секция возможностей -->
     <section class="features">
         <div class="container">
             <div class="section-title">
@@ -332,10 +338,12 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item">
-                    <h3>200+</h3>
+                    <h3>1500+</h3>
                     <p>Заданий в базе</p>
                 </div>
                 <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Доступ к материалам</p>
                 </div>
                 <div class="stat-item">
                     <h3>50+</h3>
@@ -384,13 +392,15 @@
     <script>
         function selectExam(examType) {
             if (examType === 'oge') {
-                window.location.href = 'oge-theory.html';
+                // Переход на указанный сайт для ОГЭ
+                window.location.href = 'https://boris625.github.io/uchiinfuoge.github.io/';
             } else if (examType === 'ege') {
+                // Здесь можно добавить ссылку на сайт ЕГЭ, когда он будет готов
                 window.location.href = 'ege-theory.html';
             }
         }
 
-// Простая анимация появления элементов при скролле
+        // Простая анимация появления элементов при скролле
         document.addEventListener('DOMContentLoaded', function() {
             const featureCards = document.querySelectorAll('.feature-card');
             
